@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reseter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+    <style>
+    .credentialsform {
+      margin: auto;
+      width: 35%;
+      border: 5px;
+      padding: 1px;
+    }
+
+    .lower-left {
+      margin-bottom: 1px;
+      margin-left : 1px;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      color: green;
+    }
+    </style>
+  </head>
+  <body> 
+
+ <section class="hero is-fullheight-with-navbar">
+  <div class="hero-body">
+  <p class="title">
+  <div class="credentialsform">
+  <div class="field"></div>
+
+
+  <form class="box" action="/" enctype="multipart/form-data" method='post'>
+
+    <div class="field">
+    <label class="label">Merchant Name</label>
+    <div class="control">
+      <input class="input" id="merchant_name" type="text" name="merchant_name" placeholder="Travell's Taco Stand" required
+      oninvalid="this.setCustomValidity('Merchant Name Needed')">
+    </div>
+  </div>
+  
+  <div class="field">
+    <label class="label">Merchant ID</label>
+    <div class="control">
+      <input class="input" id="merchant_id" type="password" name="merchant_id" placeholder="********" name="merchant_id" required
+      oninvalid="this.setCustomValidity('Merchant ID Needed')">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Public Key</label>
+    <div class="control">
+      <input class="input" id="public_key" type="password" placeholder="********" name="public_key" required
+      oninvalid="this.setCustomValidity('Public Key Needed')">
+    </div>
+  </div>
+
+    <div class="field">
+    <label class="label">Private Key</label>
+    <div class="control">
+      <input class="input" id="private_key" type="password" placeholder="********" name="private_key" required
+      oninvalid="this.setCustomValidity('Private Key Needed')">
+    </div>
+  </div>
+
+<p><label class="label">Environment</label></p>
+<div class="field">
+  <div class="control">
+    <label class="radio">
+      <input type="radio" name="environment" value="sandbox">
+      Sandbox
+    </label>
+    <label class="radio">
+      <input type="radio" name="environment" value="production">
+      Production
+    </label>
+  </div>
+</div>
+
+  <div class="field">
+  <div class="file has-name" id="file-name-display">
+  <label class="file-label">
+    <input class="file-input" type="file" id="fileUpload" name="attachment" class='form-control'>
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Upload File
+      </span>
+    </span>
+    <span class="file-name">
+        No file uploaded
+    </span>
+  </label>
+</div>
+</div>
+
+    <div>  
+    <button class="button is-link is-outlined is-fullwidth" type='submit'>Submit</button>
+    </div>
+
+</form>
+</section>
+
+<script>
+  const fileInput = document.querySelector('#file-name-display input[type=file]');
+  fileInput.onchange = () => {
+    if (fileInput.files.length > 0) {
+      const fileName = document.querySelector('#file-name-display .file-name');
+      fileName.textContent = fileInput.files[0].name;
+    }
+  }
+</script>
+
+</html>
