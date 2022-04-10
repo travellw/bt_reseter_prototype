@@ -2,7 +2,7 @@
 
 The Reseter is a lightweight internal tool used to refund transactions in bulk via Braintree's Application Programming Interface (API). Oftentimes merchants, typically in the small to medium size business space, who have experienced carding attacks do not have technical resources available to execute this on their end. As a result large fees, decreased customer loyalty, and disordered operations cause merchants to lose revenue or leave Braintree altogether. The PayPal teams (outside of the Braintree API Support team) that service them do not have the resources (time, insight, tooling) available to directly assist merchants who have experienced carding attacks. Ideally, the Reseter eliminates that barrier for those teams leading to a better merchant experience.
 
-![](/Users/trlwilliams/bt_reseter/public/images/Screen Shot 2021-10-20 at 9.24.18 AM.png)
+![](https://github.com/travellw/bt_reseter_prototype/blob/main/public/images/Screen%20Shot%202021-10-20%20at%209.24.18%20AM.png?raw=true)
 
 ## Architecture
 
