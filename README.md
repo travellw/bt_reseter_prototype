@@ -42,5 +42,3 @@ The Reseter is a lightweight internal tool used to refund transactions in bulk v
 We use [Semantic Versioning](https://semver.org/) for versioning major changes to this project. See below for versioning.
  
 1.0.0 MVP  
-
-# bt_reseter_prototype
